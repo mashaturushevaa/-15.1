@@ -1,0 +1,20 @@
+name: GitOps Automation
+on: [push]
+
+jobs:
+  validate-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Simulate Config Check
+        run: |
+          echo "Перевірка конфігурації OpenHAB..."
+          echo "Items validation: SUCCESS"
+          echo "Rules validation: SUCCESS"
+
+      - name: Deployment Simulation
+        run: |
+          echo "Розгортання на Edge-вузол..."
+          echo "Система оновлена успішно!"
